@@ -59,12 +59,15 @@ let FunctionSelection a b =
     match a with 
     |1 -> SumOfPrimeDiv b
     |2 -> NumberOfOddDig b
-    |3 -> ProductOfDiv b
-    |_ -> SumOfPrimeDiv b
+    |_ -> ProductOfDiv b
 
 [<EntryPoint>]
 let main argv =
-    System.Console.WriteLine("Введите номер функции и аргумент:")
+    System.Console.WriteLine("Введите номер функции и аргумент:
+    1 - Сумма простых делителей числа 
+    2 - Количество нечетных цифр числа, которые больше 3 
+    _ - Произведение делителей числа, сумма цифр которых меньше суммы цифр исходного числа 
+    ")
     let n = (Console.ReadLine() |> Int32.Parse, Console.ReadLine() |> Int32.Parse)
     let a = (fst n)
     let b = (snd n)
