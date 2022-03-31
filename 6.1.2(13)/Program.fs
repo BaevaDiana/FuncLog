@@ -20,8 +20,8 @@ let MinEl list =
         match list with
         |[]->indM
         |h::tail -> 
-            let newMin =if h<=min then h else min
-            let newInd = if h<=min then indEL else indM
+            let newMin =if h<min then h else min
+            let newInd = if h<min then indEL else indM
             minel tail newMin newInd (indEL+1)
     minel list list.Head 0 0
 
