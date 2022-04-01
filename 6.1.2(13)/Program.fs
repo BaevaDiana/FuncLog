@@ -29,6 +29,5 @@ let MinEl list =
 let main argv =
     let l = readData
     Console.WriteLine("Индекс минимального элемента списка: ")
-    let res =List.findIndex(fun x ->( x = MinEl l)) l
-    Console.WriteLine(res)
+    Console.WriteLine(MinEl l)
     0

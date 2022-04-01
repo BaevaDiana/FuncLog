@@ -58,5 +58,6 @@ let uniq list =
 [<EntryPoint>]
 let main argv =
     let l = readData
+    Console.WriteLine("Получившийся список:")
     filter (fun x -> x<100 && x>0 && (Count x l)>2) (fun x -> x*x) l|>uniq |>writeList
     0 

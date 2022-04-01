@@ -22,7 +22,7 @@ let rec writeList = function
 
 //Необходиом разместить элементы расположенные до минимального в конце массива
 
-//поиск минимального элемента
+//поиск индекса минимального элемента
 let IndexOfMinEl list = 
     let rec indexofminel list min indM indEL=
         match list with

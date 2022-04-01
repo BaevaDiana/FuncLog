@@ -22,7 +22,7 @@ let rec writeList = function
  
 //Дан масиив.Найти элементы, расположенные между первым и последним максимальным
 
-//поиск первого максимального элемента
+//поиск индекса первого максимального элемента
 let IndexFirstMaxEl list = 
     let rec indfirstmaxel list max indM indEL=
         match list with
@@ -34,7 +34,7 @@ let IndexFirstMaxEl list =
     indfirstmaxel list list.Head 0 0 
 
 
-//поиск последнего максимального элемента
+//поиск индекса последнего максимального элемента
 let IndexLastMaxEl list = 
     let rec indexlastmaxel list max indM indEL=
         match list with

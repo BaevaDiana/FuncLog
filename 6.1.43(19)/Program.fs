@@ -42,6 +42,6 @@ let CountMin list =
     
 [<EntryPoint>]
 let main argv =
-    Console.WriteLine("Колиечство минимальных элементов: ")
+    Console.WriteLine("Количество минимальных элементов: ")
     readData |> CountMin|>Console.WriteLine
     0 
