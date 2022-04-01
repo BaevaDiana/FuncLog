@@ -26,7 +26,7 @@ let rec writeList = function
 
 //поиск последнего максимального элемента
 let IndexMaxEl list = 
-    let rec IndMax listt max indM indEL=
+    let rec IndMax list max indM indEL=
         match list with
         |[]->indM
         |h::tail -> 
@@ -53,6 +53,7 @@ let Count list =
 
 
 [<EntryPoint>]
-let main argv =
+let main argv = 
+    Console.WriteLine("Количество элементов после последнего максимального:")
     readData|>Count|>Console.WriteLine
     0
