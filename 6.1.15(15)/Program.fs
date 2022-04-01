@@ -19,15 +19,15 @@ let LocalMin Index list =
     let rec localmin list ind ElByInd IndEl = //ElByInd - значение в списке с заданным индексом
         match list with
         |[]->true
-        |head::tail->
+        |h::tail->
             let result=
                 if (IndEl+1=ind || IndEl=ind) then
-                    if (IndEl=ind) then localmin tail ind head (IndEl+1) 
+                    if (IndEl=ind) then localmin tail ind h (IndEl+1) 
                     else
-                        if (head>=tail.Head && IndEl+1=ind) then localmin tail ind tail.Head (IndEl+1)
+                        if (h>=tail.Head && IndEl+1=ind) then localmin tail ind tail.Head (IndEl+1)
                         else false
                 else               
-                    if (IndEl-1=ind && head>=ElByInd) then true
+                    if (IndEl-1=ind && h>=ElByInd) then true
                         else false
             if (IndEl>=ind-1 && IndEl<=ind+1) then result
             else
