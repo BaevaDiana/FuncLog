@@ -13,6 +13,7 @@ let readData =
     Console.WriteLine("Введите список: ")
     readList n
 
+
 let rec writeList = function
     [] ->   let z = System.Console.ReadKey()
             0
