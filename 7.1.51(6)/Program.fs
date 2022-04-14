@@ -21,7 +21,7 @@ let rec writeList = function
                        writeList tail
 
 //Построить два списка L1 и L2, 
-//где элементы L1 неповторяющиеся элементы исходного списка,
+//где элементы L1 это неповторяющиеся элементы исходного списка,
 //а элемент списка L2 с номером i показывает, сколько раз элемент списка L1 с таким номером повторяется в исходном.
 
 let BuildList list = 
@@ -29,14 +29,16 @@ let BuildList list =
         fun m x -> 
             let f = fst(m) @ [fst(x)]
             let s = snd(m) @ [snd(x)]
-            (f,s)) ([], [])(List.countBy (fun x->x) list)
+            (f,s))
+        ([], [])(List.countBy (fun x->x) list)
     
 
 [<EntryPoint>]
 let main argv =
-    let newList = readData|>  BuildList
+    let newList = readData|> BuildList 
     Console.WriteLine("Список L1:")
     writeList (fst(newList))
     Console.WriteLine("Список L2:")
     writeList (snd(newList))
+    
     0 
