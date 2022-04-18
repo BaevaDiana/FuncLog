@@ -21,7 +21,14 @@ let rec writeList = function
                        writeList tail
 
 
+//Дан целочисленный массив, в котором лишь один элемент отличается от остальных. Необходимо найти значение этого элемента.
+let OtherElement list = 
+    if List.findIndex (fun x-> x = (List.max list)) list = List.findIndexBack (fun x-> x = (List.max list)) list  then List.max list
+    else List.min list
+
 [<EntryPoint>]
 let main argv =
-    printfn "Hello World from F#!"
-    0 // return an integer exit code
+   let list1= readData 
+   let res= OtherElement list1
+   Console.WriteLine("Элемент,который отличается от остальных:{0}",res)
+   0 
