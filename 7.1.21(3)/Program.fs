@@ -32,4 +32,4 @@ let ListAfterMax list =
 let main argv =
    Console.WriteLine("Элементы после первого максимального:")
    readData|> ListAfterMax |>writeList;
-    0 
+   0 

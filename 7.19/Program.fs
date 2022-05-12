@@ -13,9 +13,9 @@ let СheckForPalindrome str =
     let newStr = String.filter (fun x -> x>='a' && x<='z') str
     let rec checkforpalindrome str =
         match str with
-        |""-> Console.WriteLine("Палиндром !")
+        |""-> Console.WriteLine("Не палиндром !")
         |_-> 
-            if str.[0]=str.[str.Length-1] then Console.WriteLine("Не палиндром !")
+            if str.[0]=str.[str.Length-1] then Console.WriteLine("Палиндром !")
             else 
                 checkforpalindrome str.[1..str.Length-2]
     Convert.ToString(checkforpalindrome newStr)

@@ -28,4 +28,4 @@ let CountAfterMax list = List.length list - (List.findIndexBack (fun x-> x=(List
 let main argv =
    Console.WriteLine("Количество элементов после последнего максимального:")
    readData|> CountAfterMax  |>Console.WriteLine;
-    0 
+   0 

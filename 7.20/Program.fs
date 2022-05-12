@@ -43,7 +43,7 @@ let SortByMedian list =
         |[]->sortList
         |_ ->
             let nowMed = FindOfMedian list //ищем медиану в текущей строке
-            let indMed =List.findIndex (fun x->x=nowMed) list
+            let indMed =List.findIndex (fun x->x=nowMed) list //ищем по индексу медиану в строке
             let newList = removeAt (indMed) list//удаляем прошлое медианное значение
             sortbymedian newList (sortList @ [nowMed])
     sortbymedian list []

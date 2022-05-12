@@ -23,7 +23,7 @@ let rec writeList = function
 
 //Дан целочисленный массив, в котором лишь один элемент отличается от остальных. Необходимо найти значение этого элемента.
 let OtherElement list = 
-    if List.findIndex (fun x-> x = (List.max list)) list = List.findIndexBack (fun x-> x = (List.max list)) list  then List.max list
+    if List.findIndex (fun x-> x = (List.max list)) list = List.findIndexBack (fun x-> x = (List.max list)) list  then List.max list //элемент который отличается от остальных
     else List.min list
 
 [<EntryPoint>]
